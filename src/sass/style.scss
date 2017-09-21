@@ -96,7 +96,8 @@ ul {
 body {
   margin: 0;
   background-image: url('../img/assets/background.jpg');
-  height: 100vh;
+  // height: 100vh;
+  height: 100vw;
   background-size: cover;
   background-position: left 83% center;
   font-family: "Roboto", sans-serif;
@@ -146,7 +147,46 @@ body {
     flex-grow: 1;
     background: #100F22;
     opacity: 0.8;
+    &:before {
+      content: '';
+      z-index: 999;
+      position: fixed;
+      background-image: url('../img/assets/background.jpg');
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
   }
+}
+
+.nav-item {
+  &-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 17px;
+    transition: 0.3s;
+    &:hover {
+      background-color: #292a48;
+    }
+  }
+  &.active {
+    .nav-item-link {
+      background-color: #292a48;
+    }
+  }
+  &-title {
+    i {
+      font-size: 16px;
+      padding-right: 5px; 
+    }
+  }
+  &-counter {
+    color: #8a8995;
+  } 
 }
 
 .content {
