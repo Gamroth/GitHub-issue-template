@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- inject:css -->
+    <!-- endinject -->
+    <link rel="stylesheet" href="css/style.min.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div class="container h-100 d-flex justify-content-center align-items-center">
+      <div class="window d-flex flex-row">
+        <div class="sidebar">
+          <div class="window-controls">
+            <span class="control control-close"></span>
+            <span class="control control-minimize"></span>
+            <span class="control control-maximize"></span>
+          </div>
+          <div class="sidebar-items-list">
+            
+
+          </div>
+        </div>
+
+
+        <div class="content">
+          <div class="vertical-scroll">
+            <ul class="items-list">
+              <li class="items-group">
+                <span class="items-group-title">19-07-2016</span>
+                <ul>
+                  <li class="item">
+                    <span class="item-name">Page changes</span>
+                    <span class="item-action active"><i class="icon-star"></i></span>
+                  </li>
+                  <li class="item">
+                    <span class="item-name">Test</span>
+                    <span class="item-action active"><i class="icon-star"></i></span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+      <!-- inject:js -->
+      <!-- endinject -->
+      <script type="text/javascript">
+        onload = function() {
+          var stars = document.getElementsByClassName('item-action');
+
+          for(var i = 0; i < stars.length; i++) {
+            stars[i].addEventListener('click', function() {
+              this.classList.toggle('active');
+            }, false);
+          }
+        }
+      </script>
+  </body>
+</html>
