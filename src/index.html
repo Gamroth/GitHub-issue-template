@@ -9,16 +9,16 @@
   </head>
   <body>
     <div class="container h-100 d-flex justify-content-center align-items-center">
-      <div class="window d-flex flex-row">
+      <div class="window d-flex flex-row" id="window">
         <div class="sidebar">
           <div class="window-controls">
             <span class="control control-close"></span>
             <span class="control control-minimize"></span>
             <span class="control control-maximize"></span>
           </div>
-          <nav class="sidebar-items-list">
+          <nav class="sidebar-items-list" id="blured-bg">
             <ul>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a href="#!" class="nav-item-link">
                   <span class="nav-item-title"><i class="icon-github"></i> All</span>
                   <span class="nav-item-counter">12</span>
@@ -169,26 +169,6 @@
       </div>
     </div>
 
-
-
-
-
-
-
-
-
-      <!-- inject:js -->
-      <!-- endinject -->
-      <script type="text/javascript">
-        onload = function() {
-          var stars = document.getElementsByClassName('item-action');
-
-          for(var i = 0; i < stars.length; i++) {
-            stars[i].addEventListener('click', function() {
-              this.classList.toggle('active');
-            }, false);
-          }
-        }
-      </script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>

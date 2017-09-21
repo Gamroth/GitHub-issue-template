@@ -21,7 +21,6 @@ $icon-open-issue: "\e902";
 i {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'el_passion_github' !important;
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -96,8 +95,7 @@ ul {
 body {
   margin: 0;
   background-image: url('../img/assets/background.jpg');
-  // height: 100vh;
-  height: 100vw;
+  height: 100vh;
   background-size: cover;
   background-position: left 83% center;
   font-family: "Roboto", sans-serif;
@@ -143,19 +141,34 @@ body {
   width: 150px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   .sidebar-items-list {
     flex-grow: 1;
-    background: #100F22;
-    opacity: 0.8;
-    &:before {
+    position: relative;
+
+    &:before{
       content: '';
-      z-index: 999;
-      position: fixed;
-      background-image: url('../img/assets/background.jpg');
+      display: block;
+      position: absolute;
       top: 0;
-      bottom: 0;
       left: 0;
+      bottom: 0;
       right: 0;
+      opacity: 0.8;
+      z-index: -1;
+      background: #100F22;
+    }
+
+    &:after {
+      content: '';
+      z-index: -2;
+      position: absolute;
+      filter: blur(5px);
+      background-image: url('../img/assets/background.jpg');
+      width: 100vw;
+      height: 100vw;
+      background-size: cover;
+      background-position: left 83% center;
     }
   }
 }
