@@ -105,7 +105,7 @@ gulp.task('scripts', function() {
 //     gulp.watch("./src/img/*", ['images']);
 //     gulp.watch("./src/js/*.js", ['scripts']);
 // });
-gulp.task('server', ['styles', 'html', 'scripts'], function() {
+gulp.task('server', ['styles', 'html', 'images', 'scripts'], function() {
     browserSync.init({
         server: "./public"
     });
